@@ -1,6 +1,7 @@
-#Aplica eliminacion gaussiana para convertir la matriz M en una matriz triangular superior. Modifica una copia de la matriz
 #Ejercicio 1
 # Parte 1
+#Aplica eliminacion gaussiana para convertir la matriz M en una matriz triangular superior.
+#Modifica una copia de la matriz
 def matrizTriangularSuperior(M):
     # Hacemos una copia para no modificar la matriz original
     A = M.copy().astype(float)  # Convertimos a float para evitar problemas
@@ -34,6 +35,7 @@ def matrizTriangularSuperior2(T):
     return A
     
 #Parte 3
+#Manda a llamar las funciones matrizTriangularSuperior() y matrizTriangularSuperior2() y regresa la diagonal de la matriz
 def Diag(M):
     # Paso 1: Convertir a triangular superior
     U = matrizTriangularSuperior(M)
@@ -59,14 +61,7 @@ def factorizacionLU(A):
             A[i, j:] -= factor * A[j, j:]       # Eliminación gaussiana       
     U = A  # Lo que queda de A después de la eliminación es U
     return L, U
-
-#Parte 2
-
-
-
-
-
-
+    
 #Ejercicio 3
 #Parte 1
 #Calcular la proyección del vector u sobre el vector v.
@@ -81,6 +76,7 @@ def proyeccion(u, v):
     return (productoInterno / normavCuadrado) * v
 
 #Parte 2
+#GramSchmidtQR() es necesaria para calcular la descomposición Q R de una matriz A 
 def GramSchmidtQR(A):
     A = np.array(A, dtype=float)
     m, n = A.shape
