@@ -34,10 +34,13 @@ def matrizTriangularSuperior2(T):
             
                 A[i, j] = A[i, j] - factor * A[k, j]
     return A
-
-
-
-
-
     
 #Parte 3
+def Diag(M):
+    # Paso 1: Convertir a triangular superior
+    U = matrizTriangularSuperior(M)
+    # Paso 2: Convertir a matriz diagonal
+    D = matrizTriangularSuperior2(U)
+    # Extrae y devuelve solo la diagonal principal
+    diagonal = np.diag(D)
+    return diagonal
