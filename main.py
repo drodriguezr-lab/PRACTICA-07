@@ -46,4 +46,15 @@ for n in [3, 4, 5]:
     print("\nMatriz Diagonal obtenida:")
     print(np.round(D, decimals=6))
 
-    
+
+
+#Ejercicio 3
+#Parte 1
+# Ejemplo 
+u = np.array([1, 2, 3])
+v = np.array([1, 1, 8])
+proj = proyeccion(u, v)
+
+print("u =", u)
+print("v =", v)
+print("Proyección =", np.round(proj, decimals=4))
