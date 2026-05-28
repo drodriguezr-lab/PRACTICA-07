@@ -58,3 +58,38 @@ def proyeccion(u, v):
         raise ValueError("El vector v no puede ser el vector cero")
     
     return (productoInterno / normavCuadrado) * v
+
+#Parte 2
+def GramSchmidtQR(A):
+    A = np.array(A, dtype=float)
+    m, n = A.shape
+    
+    # Inicializamos Q y R
+    Q = np.zeros((m, n))
+    R = np.zeros((n, n))
+    
+    # u1 = v1 (primera columna)
+    u = A[:, 0].copy()
+    normaU = np.linalg.norm(u)
+    
+    Q[:, 0] = u / normaU
+    R[0, 0] = normaU
+    
+    for k in range(1, n):
+        u = A[:, k].copy()
+        
+        # Restamos las proyecciones sobre las columnas anteriores de Q
+        for j in range(k):
+            proj = proyeccion(u, Q[:, j])
+            u = u - proj
+            R[j, k] = np.dot(Q[:, j], A[:, k])  # <qj, vk>
+        
+        # Normalizamos
+        normaU = np.linalg.norm(u)
+        if normaU < 1e-10:
+            raise ValueError("Las columnas de A no son linealmente independientes")
+            
+        Q[:, k] = u / normaU
+        R[k, k] = normaU
+    
+    return Q, R
