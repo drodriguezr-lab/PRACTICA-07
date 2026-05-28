@@ -45,6 +45,28 @@ def Diag(M):
     diagonal = np.diag(np.diag(D))
     return diagonal
 
+#Ejercicio 2
+#Parte 1
+import numpy as np
+
+def factorizacionLU(A):
+    A = A.copy().astype(float)  # Trabajamos con una copia
+    n = A.shape[0]
+    # Inicializamos L como matriz identidad
+    L = np.eye(n)
+    for j in range(n):  # columna pivote
+        for i in range(j+1, n):  # filas debajo del pivote
+            if abs(A[j, j]) < 1e-12:  # Pivote cercano a cero
+                raise ValueError("Pivote cero encontrado. Se necesita pivoteo (PA=LU).")
+            factor = A[i, j] / A[j, j]
+            L[i, j] = factor                    # Guardamos el multiplicador en L
+            A[i, j:] -= factor * A[j, j:]       # Eliminación gaussiana       
+    U = A  # Lo que queda de A después de la eliminación es U
+    return L, U
+
+
+
+
 
 #Ejercicio 3
 #Parte 1
