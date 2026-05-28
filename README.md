@@ -1,5 +1,13 @@
 ## PRÁCTICA 07 Práctica 7: Diagonalización Por Método De Gauss, Factorización LU y Factorización QR
 
+##  INTEGRANTES 
+* Rodríguez Rodríguez Diego
+
+
+## Uso e instalación
+Instalamos los siguientes paquetes:
+1. `numpy` como np
+
 
 ## Ejercicio 1:
 En este ejercicio deberán implementar el método de eliminación Gaussiana para diagonalizar una matriz cuadrada.
