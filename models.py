@@ -1,5 +1,3 @@
-
-
 #Aplica eliminacion gaussiana para convertir la matriz M en una matriz triangular superior. Modifica una copia de la matriz
 #Ejercicio 1
 # Parte 1
@@ -62,6 +60,9 @@ def factorizacionLU(A):
     U = A  # Lo que queda de A después de la eliminación es U
     return L, U
 
+#Parte 2
+
+
 
 
 
@@ -113,3 +114,31 @@ def GramSchmidtQR(A):
         R[k, k] = normaU
     
     return Q, R
+
+#Parte 3
+#Prueba la descomposición QR y verifica que Q @ R ≈ A
+def probarQR(A, nombre="Matriz"):
+    print(f"\n{'='*60}")
+    print(f"{nombre}:")
+    print(A)
+    
+    Q, R = GramSchmidtQR(A)
+    
+    print("\nMatriz Q:")
+    print(np.round(Q, decimals=6))
+    
+    print("\nMatriz R:")
+    print(np.round(R, decimals=6))
+    
+    # Reconstrucción
+    A_reconstruida = Q @ R
+    
+    print("\nA reconstruida (Q @ R):")
+    print(np.round(A_reconstruida, decimals=6))
+    
+    # Verificación de precisión
+    error = np.linalg.norm(A - A_reconstruida)
+    print(f"\nError ||A - Q@R|| = {error:.2e}")
+    print("La reconstrucción fue un éxito" if error < 1e-8 else " Falló la verificación")
+
+
