@@ -44,3 +44,17 @@ def Diag(M):
     # Extrae y devuelve solo la diagonal principal
     diagonal = np.diag(np.diag(D))
     return diagonal
+
+
+#Ejercicio 3
+#Parte 1
+#Calcular la proyección del vector u sobre el vector v.
+def proyeccion(u, v):
+    # <u, v> = u · v
+    productoInterno = np.dot(u, v)
+    # ||v||²
+    normavCuadrado = np.dot(v, v)
+    if normavCuadrado == 0:
+        raise ValueError("El vector v no puede ser el vector cero")
+    
+    return (productoInterno / normavCuadrado) * v
