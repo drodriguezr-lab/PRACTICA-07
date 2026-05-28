@@ -46,6 +46,42 @@ for n in [3, 4, 5]:
     print("\nMatriz Diagonal obtenida:")
     print(np.round(D, decimals=6))
 
+#Ejercicio 2
+#Parte 1
+# Ejemplo 
+# Pruebas con diferentes tamaños
+for n in [3, 4, 5]:
+    print(f"\n{'='*60}")
+    print(f"Matriz de tamaño {n} x {n}")
+    print(f"{'='*60}")
+    
+    A = np.random.random((n, n))
+    
+    try:
+        L, U = factorizacionLU(A)
+        
+        print("Matriz Original A:")
+        print(np.round(A, 6))
+        
+        print("\nMatriz L (triangular inferior):")
+        print(np.round(L, 6))
+        
+        print("\nMatriz U (triangular superior):")
+        print(np.round(U, 6))
+        
+        # Verificación
+        LU = L @ U
+        error = np.max(np.abs(A - LU))
+        print(f"\nError máximo |A - L×U| = {error:.2e}")
+        
+        if error < 1e-10:
+            print("Factorización correcta")
+        else:
+            print("Error grande en la factorización")
+            
+    except ValueError as e:
+        print(f"Error: {e}")
+
 
 
 #Ejercicio 3
