@@ -1,4 +1,4 @@
-
+import numpy as np
 
 #Ejercicio 1
 #Parte 1
