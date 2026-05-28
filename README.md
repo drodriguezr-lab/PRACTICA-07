@@ -57,7 +57,9 @@ print(np.dot(L, U))
 En este ejercicio te toca programar la descomposición QR de una matriz A. La idea es usar el Proceso de Gram-Schmidt:
 * Paso 1:
 
-Programa una función que calcule la proyección de un vector u sobre otro vector v
+Programa una función que calcule la proyección de un vector u sobre otro vector v.
+La fórmula es la siguiente:
+                  $\text{proj}_v \mathbf{u} = \frac{\langle \mathbf{u}, \mathbf{v} \rangle}{\|\mathbf{v}\|^2} \mathbf{v}$
 
 * Paso 2:
 
