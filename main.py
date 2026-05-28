@@ -15,7 +15,7 @@ for n in [3, 4, 5]:
     
 
 #Parte 2
-# Pruebas con diferentes tamaños
+# Pruebas para MatrizTriangularSuperior2(T) con diferentes tamaños
 for n in [3, 4, 5]:
     print(f"\n=== Matriz de tamaño {n}x{n} ===")
     M = np.random.random((n, n))
@@ -29,5 +29,21 @@ for n in [3, 4, 5]:
     D = matrizTriangularSuperior2(U)
     print("\nMatriz Triangular Superior:")
     print(np.round(D, decimals=4))
+
+
+#Parte 3
+#Pruebas para Diag(D)
+for n in [3, 4, 5]:
+    print(f"\n{'='*60}")
+    print(f"Matriz de tamaño {n} x {n}")
+    print(f"{'='*60}")
+    
+    M = np.random.random((n, n))
+    print("Matriz Original:")
+    print(np.round(M, decimals=4))
+    
+    D = Diag(M)
+    print("\nMatriz Diagonal obtenida:")
+    print(np.round(D, decimals=6))
 
     
