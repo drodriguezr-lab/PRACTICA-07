@@ -112,7 +112,17 @@ print("Proyección =", np.round(proj, decimals=4))
 
 #Parte 3
 # Probando Q@R (Nota.Para probar Q@R, necesitamos la funcion probarQR() que está en models.py)
-    A2 = np.array([[12, -51, 4],
+A1 = np.array([[12, -51, 4],
                    [6, 167, -68],
                    [-4, 24, -41]], dtype=float)
-    probarQR(A2, " Matriz cuadrada 3x3")
+    probarQR(A1, " Matriz cuadrada 1")
+A2 = np.array([[8, -19, 4],
+              [6, 27, -7],
+              [-51, 24, -21]], dtype=float) 
+probarQR(A2, " Matriz cuadrada 2")
+
+A3 = np.array([[1, -2, 3],
+              [5, 7, -10],
+              [-1, 4, 9]], dtype=float) 
+probarQR(A3, " Matriz cuadrada 3")
+
