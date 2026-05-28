@@ -115,7 +115,7 @@ print("Proyección =", np.round(proj, decimals=4))
 A1 = np.array([[12, -51, 4],
                    [6, 167, -68],
                    [-4, 24, -41]], dtype=float)
-    probarQR(A1, " Matriz cuadrada 1")
+probarQR(A1, " Matriz cuadrada 1")
 A2 = np.array([[8, -19, 4],
               [6, 27, -7],
               [-51, 24, -21]], dtype=float) 
