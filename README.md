@@ -8,6 +8,11 @@
 Instalamos los siguientes paquetes:
 1. `numpy` como np
 
+Ejecutamos los archivos .py en el siguiente orden:
+1. `models.py`: contiene las funciones que usaremos para resolver los ejercicios principales.
+2. `main.py`: contiene los resultados de los ejercicios.
+
+
 
 ## Ejercicio 1:
 En este ejercicio deberán implementar el método de eliminación Gaussiana para diagonalizar una matriz cuadrada.
