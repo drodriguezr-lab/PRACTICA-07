@@ -81,8 +81,22 @@ for n in [3, 4, 5]:
             
     except ValueError as e:
         print(f"Error: {e}")
+#Parte 2
+# Ejemplo con una matriz 4x4
+np.random.seed(123)
+A = np.random.random((4, 4))
 
+L, U = factorizacionLU(A)
 
+print("Matriz Original A:")
+print(A)
+
+print("\n" + "*"*70)
+print("Producto L × U:")
+print(L @ U)
+
+print("\nDiferencia (debería ser casi cero):")
+print(np.abs(A - L @ U))
 
 #Ejercicio 3
 #Parte 1
