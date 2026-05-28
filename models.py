@@ -42,5 +42,8 @@ def Diag(M):
     # Paso 2: Convertir a matriz diagonal
     D = matrizTriangularSuperior2(U)
     # Extrae y devuelve solo la diagonal principal
-    diagonal = np.diag(D)
+    diagonal = np.diag(np.diag(D))
+    diag = Diag(M)
+    print("\nDiagonal obtenida:")
+    print(np.round(diag, deci
     return diagonal
