@@ -47,8 +47,6 @@ def Diag(M):
 
 #Ejercicio 2
 #Parte 1
-import numpy as np
-
 def factorizacionLU(A):
     A = A.copy().astype(float)  # Trabajamos con una copia
     n = A.shape[0]
