@@ -108,3 +108,11 @@ proj = proyeccion(u, v)
 print("u =", u)
 print("v =", v)
 print("Proyección =", np.round(proj, decimals=4))
+
+
+#Parte 3
+# Probando Q@R (Nota.Para probar Q@R, necesitamos la funcion pruebasQR() que está en models.py)
+    A2 = np.array([[12, -51, 4],
+                   [6, 167, -68],
+                   [-4, 24, -41]], dtype=float)
+    probarQR(A2, " Matriz cuadrada 3x3")
