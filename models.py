@@ -1,4 +1,4 @@
-import numpy as np
+
 
 #Aplica eliminacion gaussiana para convertir la matriz M en una matriz triangular superior. Modifica una copia de la matriz
 def matrizTriangularSuperior(M):
