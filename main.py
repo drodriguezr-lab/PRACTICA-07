@@ -111,7 +111,7 @@ print("Proyección =", np.round(proj, decimals=4))
 
 
 #Parte 3
-# Probando Q@R (Nota.Para probar Q@R, necesitamos la funcion pruebasQR() que está en models.py)
+# Probando Q@R (Nota.Para probar Q@R, necesitamos la funcion probarQR() que está en models.py)
     A2 = np.array([[12, -51, 4],
                    [6, 167, -68],
                    [-4, 24, -41]], dtype=float)
